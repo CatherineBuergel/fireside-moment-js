@@ -1,9 +1,14 @@
-let mongoose = require('mongoose')
-let connectionStr = "mongodb+srv://iamporter:top-secret1@porters-pizza-shack-x0nuc.azure.mongodb.net/test?retryWrites=true"
-let connection = mongoose.connection
+const mongoose = require('mongoose')
+const connectionString = "mongodb://porter:forSammy14@ds052819.mlab.com:52819/sams-class"
+const connection = mongoose.connection
 
-mongoose.connect(connectionStr, { useNewUrlParser: true })
+mongoose.connect(connectionString, { useNewUrlParser: true })
 
-connection.on('error', err => console.log('DB ERROR:', err))
+connection.on('error', err => {
+  console.log('ERROR FROM DATABASE: ', err)
+})
 
-connection.once('open', () => console.log('connected to the database!'))
+
+connection.once('open', () => {
+  console.log('Connected to Database')
+})
