@@ -32,7 +32,7 @@ export default {
       }
    },
    filters: {
-      formatTime: (date) => {
+      formatTime(date) {
          return Moment(String(date)).fromNow()
       }
    },
