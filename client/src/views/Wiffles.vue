@@ -1,5 +1,8 @@
 <template>
    <div class="wiffles container-fluid">
+      <div class="row justify-content-center">
+         <img src="https://bakingamoment.com/wp-content/uploads/2018/07/IMG_9117-fluffy-buttermilk-waffles-from-scratch-horizontal.jpg" :height="$mq | mq({xs: '150px', sm: '200px', md: '250px', lg: '300px'})">
+      </div>
       <div class="row">
          <div class="col-10 offset-1">
             <h5 class="action" @click="create = !create">{{!create ? 'Post a Wiffle' : 'Cancel'}}</h5>
@@ -11,7 +14,7 @@
          </div>
       </div>
       <div class="row">
-         <div v-for="wiffle in wiffles" :key="wiffle.id" class="col-4">
+         <div v-for="wiffle in wiffles" :key="wiffle.id" class="col-12 col-md-4">
             <div class="card">
                <div class="card-header">
                   <h5>{{wiffle.createdAt | formatTime}}</h5>
