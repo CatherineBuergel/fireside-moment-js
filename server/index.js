@@ -2,8 +2,10 @@ let express = require('express')
 let bp = require('body-parser')
 let cors = require('cors')
 let server = express()
-let PORT = 3000
+let PORT = process.env.PORT || 3000
 require('./assets/db/db-config')
+
+server.use(express.static(__dirname + '../../client/dist'))
 
 server.use(bp.json())
 server.use(bp.urlencoded({
