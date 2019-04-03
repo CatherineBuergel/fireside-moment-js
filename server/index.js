@@ -10,7 +10,7 @@ server.use(bp.urlencoded({
   extended: true
 }))
 
-let whitelist = ['http://localhost:8080']
+let whitelist = ['http://localhost:8080', 'https://wifles.herokuapp.com/']
 let corsOptions = {
     origin: function (origin, callback) {
         let originIsWhitelisted = whitelist.indexOf(origin) !== -1

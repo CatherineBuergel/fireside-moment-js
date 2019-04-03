@@ -4,8 +4,10 @@ import Axios from 'axios'
 
 Vue.use(Vuex)
 
+let baseUrl = window.location.host.includes('localhost') ? '//localhost:3000/' : '/'
+
 let _api = Axios.create({
-  baseURL: '//localhost:3000/api/wiffles'
+  baseURL: baseUrl+'api/wiffles'
 })
 
 export default new Vuex.Store({
