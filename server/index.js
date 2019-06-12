@@ -24,6 +24,8 @@ server.use(cors(corsOptions))
 
 let wiffles = require('./assets/routes/wiffles')
 server.use('/api/wiffles', wiffles)
+let comments = require('./assets/routes/comments')
+server.use('/api/comments', comments)
 
 server.use('*', (err, req, res, next) => {
   res.status(err.status || 400).send(err)
