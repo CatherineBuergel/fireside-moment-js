@@ -42,7 +42,7 @@ import Moment from "moment";
 export default {
   name: "wiffle",
   mounted(){
-    //   this.$store.dispatch('getComments', this.wiffle._id)
+      this.$store.dispatch('getComments', this.wiffle._id)
   },
   props: ["wiffle"],
   data() {

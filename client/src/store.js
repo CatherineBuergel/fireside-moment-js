@@ -37,7 +37,7 @@ export default new Vuex.Store({
     },
     setComments(state, comments) {
       if (comments.length) {
-        Vue.set(state.comments, state.comments[0].wiffleId, comments)
+        Vue.set(state.comments, comments[0].wiffleId, comments)
       }
     }
   },
